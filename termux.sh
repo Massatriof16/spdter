@@ -23,6 +23,7 @@ sleep 3
  cp -r spreadtrum_flash/spd_dump $(pwd)
  cp -r spreadtrum_flash/Lib $(pwd)
  rm -rf spreadtrum_flash
+ echo " "
  echo "file telah dibuat"
  fi
  
@@ -33,7 +34,7 @@ sleep 3
 
 
 chmod a+x *
-echo " Check file yang terkonek....."
+echo " Mengecek Device yang terkonek....."
 termux-usb -l > file.txt
 # Ambil path USB dari file.txt dengan grep dan sed
 USB_DEVICE=$(grep -o '/dev/bus/usb/[0-9]*/[0-9]*' file.txt)
